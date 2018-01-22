@@ -134,70 +134,70 @@ function happilyon_init_sidebars( ) {
 		'name'          => __( 'Front Page Left', 'happilyon' ),
         'id'            => 'front-left',
         'description'   => __( 'Displays on the left of the homepage', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
 
     register_sidebar(array(
 		'name'          => __( 'Front Page Center', 'happilyon' ),
         'id'            => 'front-center',
         'description'   => __( 'Displays in the center of the homepage', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
 
     register_sidebar(array(
 		'name'          => __( 'Front Page Right', 'happilyon' ),
         'id'            => 'front-right',
         'description'   => __( 'Displays on the right of the homepage', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
 
     register_sidebar(array(
 		'name'          => __( 'Front Page Right', 'happilyon' ),
         'id'            => 'front-right',
         'description'   => __( 'Displays on the right of the homepage', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
 
     register_sidebar(array(
 		'name'          => __( 'Page Sidebar', 'happilyon' ),
         'id'            => 'page',
         'description'   => __( 'Displays on the side of pages with a sidebar', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
    
     register_sidebar(array(
 		'name'          => __( 'Blog Sidebar', 'happilyon' ),
         'id'            => 'blog',
         'description'   => __( 'Displays on the side of pages in the blog section', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
     
     register_sidebar(array(
 		'name'          => __( 'Search Sidebar', 'happilyon' ),
         'id'            => 'search',
         'description'   => __( 'Displays on the side of pages in the search section', 'happilyon' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
     ));
 
 
