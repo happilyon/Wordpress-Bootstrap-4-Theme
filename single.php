@@ -24,7 +24,8 @@
             <?php the_content(); ?>
 
             <hr>
-
+          
+          <?php comment_form(); ?>
           <?php comments_template(); ?>
 
             <?php endwhile; else: ?>

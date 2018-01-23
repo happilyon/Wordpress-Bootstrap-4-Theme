@@ -1,24 +1,23 @@
-<?php wp_list_comments( $args ); ?>
+<?php wp_list_comments( ); ?>
 
-<?php wp_link_pages( $args ); ?>
+<?php wp_link_pages(); ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <html <?php language_attributes(); ?>
 
-<?php comment_form(); ?>
-
 
 <?php
 
-
 // wp required for theme check - above code required as well
 
-add_theme_support( $feature ); 
+load_theme_textdomain( 'happilyon' );
 
 add_theme_support( 'automatic-feed-links' );
 
-if ( ! isset( $content_width ) ) $content_width = 900;
+if ( ! isset( $content_width ) ) {
+	$content_width = 900;
+}
 
 if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
@@ -26,9 +25,9 @@ paginate_comments_links();
 
 the_post_thumbnail();
 
-add_theme_support( "custom-header", $args );
+add_theme_support( 'custom-header' );
 
-add_theme_support( "custom-background", $args );
+add_theme_support( 'custom-background' );
 
 add_editor_style();
 
@@ -50,30 +49,30 @@ function happilyon_post_tags() {
 
 // Page Title - wp required for theme check
 
-add_action( 'after_setup_theme', 'wpse_theme_setup' );
-function wpse_theme_setup() {
+add_action( 'after_setup_theme', 'happilyon_theme_setup' );
+function happilyon_theme_setup() {
     add_theme_support( 'title-tag' );
 }
 
 
 // CSS files
 
-function theme_styles() {
+function happilyon_theme_styles() {
     wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.css' );
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
 }
 
-add_action( 'wp_enqueue_scripts', 'theme_styles' );
+add_action( 'wp_enqueue_scripts', 'happilyon_theme_styles' );
 
 // JS files
 
-function theme_js() {
+function happilyon_theme_js() {
     wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.js', array('jquery'), '', true );
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '', true );
 	wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery', 'bootstrap_js'), '', true );
 }
 
-add_action( 'wp_enqueue_scripts', 'theme_js' );
+add_action( 'wp_enqueue_scripts', 'happilyon_theme_js' );
 
 // Theme Suppot menu and post images 
 
@@ -82,14 +81,14 @@ add_theme_support( 'post-thumbnails' );
 
 // Navbar Menu
 
-function register_theme_menus() {
+function happilyon_register_theme_menus() {
 	register_nav_menus(
 		array(
 			'header-menu'	=> __( 'Header Menu', 'happilyon' )
 		)
 	);
 }
-add_action( 'init', 'register_theme_menus' );
+add_action( 'init', 'happilyon_register_theme_menus' );
 
 
 // Halt query if search box empty
@@ -101,21 +100,21 @@ add_filter( 'posts_search', function( $search, \WP_Query $q )
     return $search;
 }, 10, 2 );
 
+
 // If you dont want admin bar to show up for loged in user uncomment below line and adjust CSS style   
 
 //add_filter( 'show_admin_bar', '__return_false' );
 
 //Change admin bar color
 
-add_action('wp_head', 'change_bar_color');
-add_action('admin_head', 'change_bar_color');
-function change_bar_color() {
+add_action('wp_head', 'happilyon_change_bar_color');
+add_action('admin_head', 'happilyon_change_bar_color');
+function happilyon_change_bar_color() {
 ?>
 <style>
-#wpadminbar{
+#wpadminbar {
 background: #343a40 !important;
 height: 35px!important;
-
 }
 </style>
 <?php
