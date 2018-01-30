@@ -11,7 +11,7 @@ This article summarizes what you need to know to install it
 
 Download the ZIP file and upload to your WordPress site or local development environment
 
-Theme Check Pass, also imported XML test data, We have also been using a bootstraps 3 version of this theme, with no issue whenever WordPress or plugins update.
+Theme Check Pass, also imported XML test data, We have also been using a bootstraps 3 version of this theme for some time now, with no issue whenever WordPress or plugins update.
 
 ![test-pass](https://user-images.githubusercontent.com/24851606/35274960-23fa5a20-0064-11e8-9de0-3edff57a8765.png)
 
