@@ -3,6 +3,7 @@
 Documentation will be added soon, theme submitted to WordPress for approval
 
 Track the ticket here -> https://themes.trac.wordpress.org/ticket/50434
+
 Join the review team here ->  https://make.wordpress.org/themes/handbook/get-involved/become-a-reviewer/
 
 This article summarizes what you need to know
