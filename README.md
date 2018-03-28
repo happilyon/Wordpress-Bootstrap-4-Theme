@@ -19,10 +19,10 @@ Theme Check Pass, also imported XML test data, We have also been using a bootstr
 Small code error
 
 Code should have been this 
-<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() );?>/images/favicon.ico">
+``` <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() );?>/images/favicon.ico"> ```
 
 But was this
-<link rel="shortcut icon" href="<?phpecho esc_url( get_template_directory_uri() );?>/images/favicon.ico">
+``` <link rel="shortcut icon" href="<?phpecho esc_url( get_template_directory_uri() );?>/images/favicon.ico"> ```
 
 It is fixed now and installed on a live site
 
