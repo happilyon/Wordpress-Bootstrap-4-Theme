@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="<?phpecho esc_url( get_template_directory_uri() );?>/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() );?>/images/favicon.ico">
 
 
     <?php wp_head(); ?>  
